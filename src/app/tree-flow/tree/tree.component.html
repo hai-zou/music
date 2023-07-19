@@ -1,0 +1,14 @@
+<div
+	*ngFor="let entry of entryData; let i = index"
+	[class]="{ sole: entryData.length === 1 }"
+	class="entry"
+>
+	<span class="label">{{ entry.label }}</span>
+
+	<div
+		*ngIf="!!entry.children.length" 
+		class="branch lv{{i}}"
+	>
+		<app-tree [entryData]="entry.children"></app-tree>
+	</div>
+</div>
