@@ -1,0 +1,20 @@
+{
+  "/onlineCdnProxy": {
+    "target": "https://files.dreame.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite":{
+      "^/onlineCdnProxy": ""
+    }
+  },
+  "/testFiles": {
+    "target": "https://test-files.dreame.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite":{
+      "^/testFiles": ""
+    }
+  }
+}

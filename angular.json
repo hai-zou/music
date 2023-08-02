@@ -29,6 +29,7 @@
               "src/assets"
             ],
             "styles": [
+			  "node_modules/@videogular/ngx-videogular/fonts/videogular.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -62,12 +63,16 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+		  "options": {
+            "proxyConfig": "proxy.config.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "music:build:production"
             },
             "development": {
-              "browserTarget": "music:build:development"
+              "browserTarget": "music:build:development",
+			  "disableHostCheck": true
             }
           },
           "defaultConfiguration": "development"
